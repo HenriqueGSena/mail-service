@@ -38,22 +38,6 @@ spring:
   jackson:
     serialization:
       indent-output: true
-  cloud:
-    consul:
-      config:
-        fail-fast: false # if not in "prod" profile, do not force to use Spring Cloud Config
-        format: yaml
-        profile-separator: '-'
-      discovery:
-        prefer-ip-address: true
-        tags:
-          - profile=${spring.profiles.active}
-          - version=#project.version#
-          - git-version=${git.commit.id.describe:}
-          - git-commit=${git.commit.id.abbrev:}
-          - git-branch=${git.branch:}
-      host: localhost
-      port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:h2:mem:mailService;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
@@ -97,7 +81,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: MWEyZTY1ZGNmMTQzMGMwMWU0M2FhNDM3M2U5YWQ4ODI3MDJiNDFjMzI3ZjdlYzM4NjAxMzQzMDI5ZDg4NDQ2MGE5ZDYyOTE1ZWNlZGEwM2IzYjZlODk1ZWJhNjFmOTM5NzZiNWZiYzJmMzgwMmZiYTZjNDJlOTM5ZjBiN2Y5Zjg=
+        base64-secret: YmEyOTJjYTM4NzA0YWZlZmNhODZmOTcxMGJhNWIwNDZjODJiYjU3NzcxMjYzMGVhZjBlNWQ0N2I2ZDc1ZWY4MzdmMzUzNmVmNDNhOTljNzIyMzY1M2M0YjQ0OWE5MjVmNjFlZmEzMzMwNDgxMjQ2MmY1MDAwZDY1NjZmYjZmMzQ=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

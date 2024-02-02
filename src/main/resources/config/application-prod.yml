@@ -37,12 +37,6 @@ spring:
       enabled: false
     livereload:
       enabled: false
-  cloud:
-    consul:
-      discovery:
-        prefer-ip-address: true
-      host: localhost
-      port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/mailService?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
@@ -107,7 +101,7 @@ jhipster:
         # - In the Consul configserver
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: MWEyZTY1ZGNmMTQzMGMwMWU0M2FhNDM3M2U5YWQ4ODI3MDJiNDFjMzI3ZjdlYzM4NjAxMzQzMDI5ZDg4NDQ2MGE5ZDYyOTE1ZWNlZGEwM2IzYjZlODk1ZWJhNjFmOTM5NzZiNWZiYzJmMzgwMmZiYTZjNDJlOTM5ZjBiN2Y5Zjg=
+        base64-secret: YmEyOTJjYTM4NzA0YWZlZmNhODZmOTcxMGJhNWIwNDZjODJiYjU3NzcxMjYzMGVhZjBlNWQ0N2I2ZDc1ZWY4MzdmMzUzNmVmNDNhOTljNzIyMzY1M2M0YjQ0OWE5MjVmNjFlZmEzMzMwNDgxMjQ2MmY1MDAwZDY1NjZmYjZmMzQ=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

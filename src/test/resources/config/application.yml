@@ -16,14 +16,6 @@
 spring:
   application:
     name: mailService
-  cloud:
-    consul:
-      discovery:
-        enabled: false
-        instanceId: ${spring.application.name}:${spring.application.instance-id:${random.value}}
-      config:
-        enabled: false
-      enabled: false
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -77,7 +69,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: MWEyZTY1ZGNmMTQzMGMwMWU0M2FhNDM3M2U5YWQ4ODI3MDJiNDFjMzI3ZjdlYzM4NjAxMzQzMDI5ZDg4NDQ2MGE5ZDYyOTE1ZWNlZGEwM2IzYjZlODk1ZWJhNjFmOTM5NzZiNWZiYzJmMzgwMmZiYTZjNDJlOTM5ZjBiN2Y5Zjg=
+        base64-secret: YmEyOTJjYTM4NzA0YWZlZmNhODZmOTcxMGJhNWIwNDZjODJiYjU3NzcxMjYzMGVhZjBlNWQ0N2I2ZDc1ZWY4MzdmMzUzNmVmNDNhOTljNzIyMzY1M2M0YjQ0OWE5MjVmNjFlZmEzMzMwNDgxMjQ2MmY1MDAwZDY1NjZmYjZmMzQ=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400

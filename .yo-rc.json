@@ -32,6 +32,7 @@
     "serverSideOptions": [],
     "serviceDiscoveryType": "consul",
     "skipClient": true,
+    "skipUserManagement": true,
     "testFrameworks": [],
     "websocket": false,
     "withAdminUi": null
