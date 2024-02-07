@@ -1,0 +1,31 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="00000000000003" author="sena" context="dev">
+        <createTable tableName="mail">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="VARCHAR(255)" />
+            <column name="mail_adress" type="VARCHAR(255)" />
+            <column name="subject" type="VARCHAR(255)" />
+            <column name="message" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="00000000000004" author="sena" context="!dev">
+        <createTable tableName="mail">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="VARCHAR(255)" />
+            <column name="mail_adress" type="VARCHAR(255)" />
+            <column name="subject" type="VARCHAR(255)" />
+            <column name="message" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
